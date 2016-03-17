@@ -33,10 +33,10 @@ Then switch the `:scm` option to `:copy` in `config/deploy.rb`:
 
     set :scm, :copy
 
-    
-Configuration
-=============
+Remove files and directories that you don't want to copy:
 
+    set :exclude_dir, ['tmp', 'config/*.yml']
+    
 Since this tool involve tar to create a depolyable archive. A bit of tar understanding is required.
 
 `set :include_dir`
